@@ -33,7 +33,6 @@ const Demo = () => {
 
       setArticle(newArticle);
       setAllArticles(updatedAllArticles);
-      console.log(newArticle);
 
       localStorage.setItem("articles", JSON.stringify(updatedAllArticles));
     }
@@ -103,7 +102,7 @@ const Demo = () => {
           <img src={loader} alt="loader" className="object-contain w-20 h-20" />
         ) : error ? (
           <p className="font-bold text-center text-black font-inter">
-            something went wrong
+            something went wrong, try another url
             <br />
             <span className="font-normal text-gray-700 font-satoshi">
               {error?.data?.error}
